@@ -1,0 +1,2 @@
+USER <- 'root'
+PASSWORD <- 'root'
