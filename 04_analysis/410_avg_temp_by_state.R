@@ -31,7 +31,7 @@ data$temp <- data$rtemp/10
 png("generated/410_avg_temp_by_state.png", width=1000, height=600)
 ggplot(data=data, aes(x=reorder(state, -temp),y=temp))+
   geom_bar(stat = "identity",fill="#56B4E9") +
-  ggtitle("Durchschnittstemperturen der deutschen Bundesländer")+
+  ggtitle("Durchschnittstemperaturen der deutschen Bundesländer")+
   scale_y_continuous(name="Temperatur in °C",breaks = seq(0,30,by=2),labels=format_format(big.mark=".", decimal.mark=",", scientific=FALSE))+
   scale_x_discrete("Bundesland")+
   theme(axis.text.x=element_text(size=10),axis.text.y=element_text(size=16))

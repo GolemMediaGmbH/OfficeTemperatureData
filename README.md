@@ -1,9 +1,7 @@
 # OfficeTemperatureData
 Raw data and processing code for analysis
 
-## Table of content
-
-Explanation of directories
+## Explanation of directories
 
 ### 01_rohsql
 
@@ -14,22 +12,34 @@ The SQL dump will be imported and we will create a copy. Additional columns will
 
 Scripts in this directory should be called according to the prefix number. Re-runs in arbitrary order are recommended. The scripts validates geolocation information and helps you to fill in missing values. 
 
-Some scripts generate SQL and CSV files. Data in CSV files need to be processed manually.
-Some generated SQL scripts might contain commented SQL statements in case of ambiguous results. You need to check the statements and values and resolve the ambiguity. 
+At start, ESRI geo database files will be downloaded.
 
-```00_manual_fixes.sql``` contains additional SQL statements to fix geo location information. It is also used to store SQL statements created from CSV files.
+Some scripts generate SQL and CSV files. Data in CSV files need to be processed manually.
+Some generated SQL scripts might contain commented SQL statements in case of ambiguous results. You need to check the statements and resolve the ambiguities. 
+
+The automatically and manually generated SQL files must be executed after their generation, not in batch at once.
+
+```00_manual_fixes.sql``` contains additional SQL statements to fix geo location information. I also used it to store SQL statements created from CSV files. It is recommended to run this file several times between the other SQL scripts
 
 ### 03_climatedata
 
 Scripts in this directory must be called in order of the prefix number.
-The scripts download and import the weather date from the Deutschen Wetter Dienst (DWD).
-Then the data is assigned to the values in the office temperature values.
+The scripts download and import the weather data from the Deutschen Wetter Dienst (DWD).
+Then the data is assigned to the values in the office temperature table.
 
 Caution: The assignment will run several hours or even days depending on your hardware and MySQL settings. 
 
 ### 04_analysis
 
 Except for the first two SQL scripts, the R scripts to generate statistics and charts can be called in any order.
+
+## Settings
+
+You need to set the database credentials (username and password) in the various dbconfig files.
+
+## Harddisk usage
+
+Make sure you have at least 25 GByte free harddisk space.
 
 ## Recommended settings for MySQL
 

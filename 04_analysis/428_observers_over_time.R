@@ -72,7 +72,7 @@ data$Day <- as.Date(data$Day)
 png("generated/428_observers_over_time.png", width=1000, height=600)
 ggplot(data=data, aes(x=Day,y=sum))+
   geom_line(stat = "identity",color="#56B4E9") +
-  ggtitle("Anzahl der Messsation pro Tag")+
+  ggtitle("Anzahl der Messstation pro Tag")+
   scale_y_continuous(name="Anzahl",labels=format_format(big.mark=".", decimal.mark=",", scientific=FALSE))+
   scale_x_date(name="Datum")+
   theme(axis.text=element_text(size=16))

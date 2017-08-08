@@ -22,7 +22,7 @@ data$diff <- data$diff/10
 png("generated/417_histogram_variation_at_day.png", width=1000, height=600)
 ggplot(data=data, aes(data$diff)) + 
   geom_histogram(bins=60, fill="#56B4E9") +
-  ggtitle("Anzahl der Differenzen der Temperatur pro Messstation von7 Uhr morgens bis 18 Uhr abends")+  
+  ggtitle("Anzahl der Differenzen der Temperatur pro Messstation von 7 Uhr morgens bis 18 Uhr abends")+  
   scale_y_continuous(name="Anzahl",labels=format_format(big.mark=".", decimal.mark=",", scientific=FALSE)) +
   scale_x_continuous(name="Temperaturdifferenz in °C",breaks = seq(0,60,by=2), labels=format_format(big.mark=".", decimal.mark=",", scientific=FALSE))+  
   theme( axis.text=element_text(size=16))

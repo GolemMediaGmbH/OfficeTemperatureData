@@ -25,7 +25,7 @@ data$country<-countrycode(data$f_country, 'iso2c', 'country.name.de')
 png("generated/429_observations_country_over_time_without_germany.png", width=1000, height=600)
 ggplot(data=data, aes(x=Day, y=ctid,linetype=country, color=country)) + 
   geom_line() +
-  ggtitle("Anzahl der Messstationen pro Tag und Land")+
+  ggtitle("Anzahl der Messstationen pro Tag und Land ohne Deutschland")+
   scale_y_continuous(name="Anzahl", labels=format_format(big.mark=".", decimal.mark=",", scientific=FALSE)) +
   scale_x_date(name="Datum")+
   scale_linetype(name="Land") +
