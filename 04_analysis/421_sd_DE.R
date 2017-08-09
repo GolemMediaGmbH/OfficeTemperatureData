@@ -2,7 +2,6 @@
 
 library(RMySQL)
 library(ggplot2)
-library(scales)
 
 source('dbconfig.R')
 

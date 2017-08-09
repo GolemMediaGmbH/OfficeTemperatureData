@@ -5,9 +5,6 @@ import dbconfig
 # inspired by
 # https://stackoverflow.com/questions/7861196/check-if-a-geopoint-with-latitude-and-longitude-is-within-a-shapefile
 
-# because getting the data from db takes some time, we cache it in a file
-# called 'latloncountry.p'
-
 db = mysql.connector.connect(user=dbconfig.user, password=dbconfig.password
 							, host='localhost', database = 'bt')
 cursor = db.cursor(buffered = True)
