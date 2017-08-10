@@ -2,8 +2,9 @@
 Raw data and processing code for analysis
 
 For more information visit
-https://www.golem.de/specials/mitmachprojekt-buero/
+https://www.golem.de/specials/mitmachprojekt-buero/ and
 https://github.com/GolemMediaGmbH/OfficeTemperature
+(in german)
 
 ## Explanation of directories
 
