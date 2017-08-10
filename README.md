@@ -1,12 +1,21 @@
 # OfficeTemperatureData
 Raw data and processing code for analysis
 
+For more information visit
+https://www.golem.de/specials/mitmachprojekt-buero/
+https://github.com/GolemMediaGmbH/OfficeTemperature
+
 ## Explanation of directories
 
 ### 01_rohsql
 
 Scripts in this directory must be called in order of the prefix number.
 The SQL dump will be imported and we will create a copy. Additional columns will be added.
+
+The dump can be found here
+https://golem.de/projekte/ot/officetemp.zip
+
+The dump will be downloaded by ```00_download.sh```
 
 ### 02_geochecks
 
@@ -33,15 +42,27 @@ Caution: The assignment will run several hours or even days depending on your ha
 
 Except for the first two SQL scripts, the R scripts to generate statistics and charts can be called in any order.
 
-## Settings
+### 05_generation
+
+Scripts to generate several data files used for interactive graphics:
+http://www.golem.de/projekte/ot/charts_final.php
+
+## Settings and Requirements
+
+### Software
+
+- MySQL with Spatial Extension
+- R
+- Python
+- Bash shell is recommended
 
 You need to set the database credentials (username and password) in the various dbconfig files.
 
-## Harddisk usage
+### Harddisk usage
 
 Make sure you have at least 25 GByte free harddisk space.
 
-## Recommended settings for MySQL
+### Recommended settings for MySQL
 
 Requires at least 16 GByte RAM.
 
