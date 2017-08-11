@@ -77,3 +77,19 @@ innodb-flush-log-at-trx-commit=0
 max-heap-table-size=10737421824
 secure_file_priv=
 ```
+
+## Structure of the officetemp table
+
+* tid - unique id
+* temp - temperature as int, divide by 10 to get correct value
+* token - unique identifier for an observer, optional
+* country - ISO2 country code, optional
+* zip - ZIP, optional
+* city - City, optional
+* lat - Latitude, optional
+* lon - Longitude, optional
+* ts - Unix-Timestamp of observation
+* type - Device type, optional enum: ard (Arduino), sbc (Single Board Computer), wifimcu (generic Radio device), other 
+* debug - observation intended as test, actually unused while analysis
+
+ 
